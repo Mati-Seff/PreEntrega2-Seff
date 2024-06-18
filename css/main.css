@@ -1,0 +1,95 @@
+
+
+.contenedor {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "inicio nosotros productos"
+    "inicio servicios contacto "
+    
+}
+
+.inicio {
+    background-color: chartreuse;
+    grid-area: inicio;
+}
+
+.nosotros {
+    background-color: darkorange;
+    grid-area: nosotros;
+}
+
+.productos {
+    background-color: yellow;
+    grid-area: productos;
+}
+
+.servicios {
+    background-color: red;
+    grid-area: servicios;
+}
+
+.contacto {
+    background-color: salmon;
+    grid-area: contacto;
+}
+
+
+/*.contenedor {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "inicio nosotros productos"
+    "inicio servicios contacto ";
+
+}*/
+
+
+@media (width < 990px) {
+    .contenedor {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+      
+      "inicio          inicio"
+      "nosotros        productos"
+      "servicios       contacto" 
+    }
+}
+
+@media (width < 600px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "inicio"
+        "nosotros"
+        "productos"
+        "servicios"
+        "contacto"
+
+    }
+}
+
+.contenedor :hover {
+    font-weight: bold;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+}
+
+body{
+  background-color: yellow;
+  font-family: cursive;
+  text-align: center;
+  justify-content: center;
+}
+
+
+#titulo-color-rojo {
+    background-color: red;
+}
